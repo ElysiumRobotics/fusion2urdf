@@ -1,50 +1,10 @@
 # fusion2urdf
 
-I forked this repo from [syuntoku14](https://github.com/syuntoku14/fusion2urdf) who did a super work. During the usage of the original package some restriction hit me quite hard. I decided to add some new features to the package like handling nested components and colors.
+We forked this repo from [SpaceMaster85](https://github.com/SpaceMaster85/fusion2urdf) who did good work improving the orignial project. During the fork of the forked package some issues hit us. We are ironing out issues for our particular needs.
 
-Hope you enjoy the new features!
-
-This repo only supports Gazebo, if you are using pybullet, see: https://github.com/yanshil/Fusion2PyBullet.
-
-## Updated!!!
-* 2021/10/13: Version 1.2
-  * Made the color and material detection more robust
-  * Added ROS 2 launchfile generator
-  * Dialog Popup to choose between ROS 1 and ROS 2
-
-* 2021/03/09: version 1.1
-  * Fix FusionAPI Change
-
-* 2021/01/23: Version 1.0
-  * This version can handle now nested components
-  * The bodies and components which should be exported can be choosen via the light bulbs in Fusion 360
-  * Joints with disabled light bulb will be ignored and not exported to the urdf file
-  * Hopefully final bugfix of the joint coordinates calculation
-  * Reading out the color of the component and set it in the material file
-  * All changes are done in a temporary file, so no backup of your design file is necessary (but it is still a good idea)
-   This means that also linked components can be used
-  * Added two example Fusion 360 files, which can be found in the _Example_ folder
-
-* 2021/01/09: Fix xyz calculation. 
-  * If you see that your components move arround the map center in rviz try this update 
-  * More Infos see: https://forums.autodesk.com/t5/fusion-360-api-and-scripts/difference-of-geometryororiginone-and-geometryororiginonetwo/m-p/9837767
-
-* 2020/11/10: README fix
-  * MacOS Installation command fixed in README
-  * Date format unified in README to yyyy/dd/mm
-  * Shifted Installation Upwards for better User Experience and easier to find
-* 2020/01/04: Multiple updates:
-  * no longer a need to run a bash script to convert stls
-  * some cleanup around joint and transmission generation
-  * defines a sample material tag instead of defining a material in each link
-  * fusion2urdf now generates a self-contained ROS {robot_name}_description package
-  * now launched by roslaunch {robot_name}_description display.launch
-  * changed fusion2urdf output from urdf to xacro for more flexibility
-  * separate out material, transmissions, gazebo elements to separate files
-* 2018/20/10: Fixed functions to generate launch files
-* 2018/25/09: Supports joint types "Rigid", "Slider" & Supports the joints' limit(for "Revolute" and "Slider"). 
-* 2018/19/09: Fixed the bugs about the center of the mass and the inertia.
-
+------------------------------------------------
+Anything below here is from the original fork
+------------------------------------------------
 
 ## Installation
 
